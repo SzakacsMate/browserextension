@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Card from './components/Card'
 import Navbar from './components/Navbar'
+import Kartya from './components/Card'
+
 
 
 
@@ -23,9 +24,9 @@ useEffect(()=>{
       <div>
          <Navbar />
         
-        <h1>Extensions List</h1>
+        <h1 >Extensions List</h1>
         <section className='Column'>
-          {cards.map(card=><Card{...card}/>)} 
+          {cards.map(card=><Kartya{...card}/>)} 
         </section>
         
       </div>

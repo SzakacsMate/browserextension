@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -144,13 +144,26 @@
     @apply bg-background text-foreground;
   }
 }
+body{
+  background-image: linear-gradient(to bottom,darkblue , rgb(86, 86, 241));
+  background-size: cover;
+  color: white;
+  
+}
 .Column{
-display: table;
-  clear: both;
+display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .Cardclass{
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+ flex: 0 0 calc(33.333% - 20px); /* 3 oszlop, figyelembe véve a gap-et */
+  box-sizing: border-box;
   
+}
+.header{
+  background-color: grey;
+  border-radius: 30px;
+}
+.switch{
+  background-color: black;
 }

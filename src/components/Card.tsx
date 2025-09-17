@@ -1,15 +1,34 @@
 import React from 'react'
 import type { Cards } from '../App'
 import { Switch } from './ui/switch'
-const Card = (props:Cards) => {
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card"
+const Kartya = (props:Cards) => {
   return (
     <div className='Cardclass'>
-        <img src={props.logo} alt="" />
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
-        <Switch defaultChecked={props.isActive}></Switch>
+        <Card>
+  <CardHeader>
+    <img src={props.logo} alt="" />
+    <h3>{props.name}</h3>
+  </CardHeader>
+  <CardContent>
+   <p>{props.description}</p>
+   <Switch className='switch' defaultChecked={props.isActive}></Switch>
+  </CardContent>
+  <CardFooter>
+    
+  </CardFooter>
+</Card>
     </div>
+    
   )
 }
 
-export default Card
+export default Kartya
